@@ -47,12 +47,3 @@ __isfinitef(float f)
 	u.f = f;
 	return (u.bits.exp != 255);
 }
-
-DLLEXPORT int
-__isfinitel(long double e)
-{
-	union IEEEl2bits u;
-
-	u.e = e;
-	return (u.bits.exp != 32767);
-}

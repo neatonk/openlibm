@@ -72,26 +72,3 @@ __fpclassifyf(float f)
 	}
 }
 
-DLLEXPORT int
-__fpclassifyl(long double e)
-{
-	union IEEEl2bits u;
-
-	u.e = e;
-	mask_nbit_l(u);
-	if (u.bits.exp == 32767) {
-		if (u.bits.manl == 0 && u.bits.manh == 0) {
-			return FP_INFINITE;
-		} else {
-			return FP_NAN;
-		}
-	} else if (u.bits.exp != 0) {
-		return FP_NORMAL;
-	} else if (u.bits.manl == 0 && u.bits.manh == 0) {
-		return FP_ZERO;
-	} else {
-		return FP_SUBNORMAL;
-	}
-}
-
-

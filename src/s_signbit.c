@@ -47,12 +47,3 @@ __signbitf(float f)
 	u.f = f;
 	return (u.bits.sign);
 }
-
-DLLEXPORT int
-__signbitl(long double e)
-{
-	union IEEEl2bits u;
-
-	u.e = e;
-	return (u.bits.sign);
-}
