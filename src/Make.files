@@ -40,17 +40,6 @@ endif
 # C99 long double functions
 $(CUR_SRCS) +=	s_copysignl.c s_fabsl.c s_llrintl.c s_lrintl.c s_modfl.c
 
-# If long double != double use these; otherwise, we alias the double versions.
-$(CUR_SRCS) +=	e_acosl.c e_asinl.c e_atan2l.c e_fmodl.c \
-	e_hypotl.c e_remainderl.c e_sqrtl.c \
-	s_atanl.c s_ceill.c s_cosl.c s_cprojl.c \
-	s_csqrtl.c s_floorl.c s_fmal.c \
-	s_frexpl.c s_logbl.c s_nexttoward.c \
-	s_remquol.c \
-	s_sinl.c s_sincosl.c s_tanl.c s_truncl.c w_cabsl.c \
-	s_nextafterl.c s_rintl.c s_scalbnl.c
-#	s_cbrtl.c
-
 # C99 complex functions
 $(CUR_SRCS) +=	s_ccosh.c s_ccoshf.c s_cexp.c s_cexpf.c \
 	s_cimag.c s_cimagf.c s_cimagl.c \
