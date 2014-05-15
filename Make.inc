@@ -29,8 +29,8 @@ CFLAGS_add += -fno-builtin
 endif
 
 ifeq ($(USEGCC),1)
-CC = gcc
-CFLAGS_add += -fno-gnu89-inline
+CC = arm-linux-gnueabihf-gcc
+CFLAGS_add += -fno-gnu89-inline -mfloat-abi=soft
 endif
 
 ARCH := $(shell $(CC) -dumpmachine | sed "s/\([^-]*\).*$$/\1/")
