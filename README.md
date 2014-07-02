@@ -1,3 +1,7 @@
+This is an unofficial release until 0.4 is available (0.3 doesn't
+support pkg-config or ARM, which are needed for Mirage).
+-- Thomas Leonard, 2014-07-02
+
 ## OpenLibm
 
 OpenLibm is an effort to have a high quality, portable, standalone
