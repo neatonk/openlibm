@@ -58,7 +58,7 @@ install: all openlibm.pc
 	mkdir -p $(DESTDIR)$(includedir)/openlibm
 	cp -a libopenlibm.$(SHLIB_EXT)* $(DESTDIR)$(shlibdir)/
 	cp -a libopenlibm.a $(DESTDIR)$(libdir)/
-	cp -a src/openlibm.h $(DESTDIR)$(includedir)/
+	cp -a src/openlibm.h src/openlibm_complex.h src/complex.h $(DESTDIR)$(includedir)/
 	cp -a openlibm.pc $(DESTDIR)$(libdir)/pkgconfig/
 ifneq ($(wildcard $(ARCH)/bsd_asm.h),)
 	cp -a $(ARCH)/bsd_asm.h $(DESTDIR)$(includedir)/openlibm/
